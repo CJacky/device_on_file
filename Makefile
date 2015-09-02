@@ -18,8 +18,7 @@ i ins insmod:
 	sudo dmesg -C
 	sudo insmod chardevFile.ko
 	sudo mknod /dev/chardevFile c `cat /proc/devices | grep chardevFile | awk '{print $$1}'` 0
-	sudo chmod 666 /dev/chardevFile
-	sudo chmod 666 /tmp/chardevFile
+	sudo chmod 666 /dev/chardevFile /tmp/chardevFile
 
 r rm rmm rmmod:
 	sudo rm -f /dev/chardevFile
